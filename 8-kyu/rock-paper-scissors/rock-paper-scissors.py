@@ -1,16 +1,10 @@
 def rps(p1, p2):
     #your code here
+    beats = {"rock":"scissors", "paper":"rock", "scissors":"paper"}
     
-    if p1 == "scissors" and p2 == "paper":
+    if p1 == p2:
+        return "Draw!"
+    elif beats[p1] == p2:
         return "Player 1 won!"
-    elif p1 == "scissors" and p2 == "rock":
+    elif beats[p2] == p1:
         return "Player 2 won!"
-    elif p1 == "paper" and p2 == "scissors":
-        return "Player 2 won!"
-    elif p1 == "paper" and p2 == "rock":
-        return "Player 1 won!"
-    elif p1 == "rock" and p2 == "scissors":
-        return "Player 1 won!"
-    elif p1 == "rock" and p2 == "paper":
-        return "Player 2 won!"
-    else: return "Draw!"
